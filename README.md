@@ -19,3 +19,20 @@
 ## 6 приклад (тестування)
 ![\StasIhnatishin\practice\allPhoto\1example.png](2-exercies/allPhoto/6example.png)
 
+# 3 Завдання 
+##  Calc.java Клас для обчислень, який використовує методи для обчислення значення функції
+![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/1example.png)
+##   Item2d.java Клас для зберігання параметрів і результатів обчислень у вигляді об'єкта.
+![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/2example.png)
+##   Main.java Клас для основної логіки програми, включаючи взаємодію з користувачем через консольне меню. 
+![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/3example.png)
+##   MainTest.java Клас для тестування основної функціональності програми. 
+![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/4example.png)
+##   View.java Інтерфейс для класів, які відповідальні за відображення результатів. 
+![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/5example.png)
+##  Viewable.java: Інтерфейс для фабрик, які створюють об'єкти для відображення результатів. 
+![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/6example.png)
+##  ViewResult.java Клас, який реалізує інтерфейс View і відповідає за текстове відображення результатів обчислень на екран.
+![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/7example.png)
+##  ViewableResult.java Клас, що реалізує інтерфейс Viewable і створює об'єкти ViewResult.
+![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/8example.png)
