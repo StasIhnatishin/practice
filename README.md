@@ -36,3 +36,12 @@
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/7example.png)
 ##  ViewableResult.java Клас, що реалізує інтерфейс Viewable і створює об'єкти ViewResult.
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/8example.png)
+# 4 Завдання 
+## Main.java файл містить основну логіку програми, що забезпечує інтерфейс взаємодії з користувачем через консоль.
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/1example.png)
+## ViewableTable.java клас реалізує фабричний метод, який створює об'єкт для відображення результатів у вигляді таблиці. 
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/2example.png)
+## ViewTable.java клас відповідає за фактичне відображення результатів у вигляді текстової таблиці. 
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/3example.png)
+## MainTest.java клас містить тестові методи для перевірки основної функціональності програми, таких як додавання результатів і їх перегляд.
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/4example.png)
