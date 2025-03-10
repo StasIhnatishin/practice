@@ -20,11 +20,11 @@
 ![\StasIhnatishin\practice\allPhoto\1example.png](2-exercies/allPhoto/6example.png)
 
 # 3 Завдання 
-##  Calc.java Клас для обчислень, який використовує методи для обчислення значення функції
+##  Calc.java Клас для обчислень і логіки програми
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/1example.png)
 ##   Item2d.java Клас для зберігання параметрів і результатів обчислень у вигляді об'єкта.
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/2example.png)
-##   Main.java Клас для основної логіки програми, включаючи взаємодію з користувачем через консольне меню. 
+##   Main.java Основний клас програми, відповідає за взаємодію з користувачем. 
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/3example.png)
 ##   MainTest.java Клас для тестування основної функціональності програми. 
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/4example.png)
