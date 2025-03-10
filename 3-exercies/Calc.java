@@ -2,8 +2,12 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * Клас для обчислень і логіки програми.
+ */
 public class Calc {
-    private static final String FNAME = "Item2d.bin";
+    private static final String FNAME = "rooms.bin";
     private List<Item2d> results;
 
     public Calc() {
@@ -14,13 +18,20 @@ public class Calc {
         return results;
     }
 
-    private double calc(double x) {
-        return Math.sin(x * Math.PI / 180);
+    private int binaryToDecimal(String binary) {
+        return Integer.parseInt(binary, 2);
     }
 
-    public void init(double x, String functionType) {
-        double y = calc(x);
-        Item2d result = new Item2d(x, y, functionType);
+    public void init(String lengthBin, String widthBin, String heightBin) {
+        int length = binaryToDecimal(lengthBin);
+        int width = binaryToDecimal(widthBin);
+        int height = binaryToDecimal(heightBin);
+        
+        int perimeter = 2 * (length + width);
+        int area = length * width;
+        int volume = length * width * height;
+        
+        Item2d result = new Item2d(length, width, height, perimeter, area, volume);
         addResult(result);
     }
 
@@ -29,20 +40,26 @@ public class Calc {
     }
 
     public void showResults() {
-        for (Item2d result : results) {
-            System.out.println(result);
+        if (results.isEmpty()) {
+            System.out.println("No rooms saved.");
+        } else {
+            for (Item2d result : results) {
+                System.out.println(result);
+            }
         }
     }
 
     public void save() throws IOException {
         try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(FNAME))) {
             os.writeObject(results);
+            System.out.println("Rooms saved successfully.");
         }
     }
 
     public void restore() throws IOException, ClassNotFoundException {
         try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(FNAME))) {
             results = (List<Item2d>) is.readObject();
+            System.out.println("Rooms restored successfully.");
         }
     }
 }
