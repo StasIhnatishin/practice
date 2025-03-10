@@ -1,67 +1,55 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
  * Клас для основної логіки програми.
  */
 public class Main {
-    private List<String> results;
-
-    public Main() {
-        results = new ArrayList<>();
-    }
-
-    // Метод для додавання результату
-    public void addResult(String result) {
-        results.add(result);
-    }
-
-    public void viewResults() {
-        if (results.isEmpty()) {
-            System.out.println("No results to show.");
-        } else {
-            for (String result : results) {
-                System.out.println(result);
-            }
-        }
-    }
-    public List<String> getResults() {
-        return results;
-    }
-
-    public void menu() {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String choice;
-
-        do {
+        Calc calc = new Calc();
+        
+        while (true) {
             System.out.println("\nChoose an option:");
-            System.out.println("1. Add result");
-            System.out.println("2. View results");
-            System.out.println("3. Exit");
+            System.out.println("1. Enter new room");
+            System.out.println("2. Save current rooms");
+            System.out.println("3. Restore rooms");
+            System.out.println("4. Exit");
             System.out.print("Your choice: ");
-            choice = scanner.nextLine();
-
+            
+            String choice = scanner.nextLine();
             switch (choice) {
                 case "1":
-                    System.out.print("Enter result to add: ");
-                    String result = scanner.nextLine();
-                    addResult(result);
+                    System.out.print("Enter length in binary: ");
+                    String lengthBin = scanner.nextLine();
+                    System.out.print("Enter width in binary: ");
+                    String widthBin = scanner.nextLine();
+                    System.out.print("Enter height in binary: ");
+                    String heightBin = scanner.nextLine();
+                    calc.init(lengthBin, widthBin, heightBin);
+                    calc.showResults();
                     break;
                 case "2":
-                    viewResults();
+                    try {
+                        calc.save();
+                    } catch (IOException e) {
+                        System.out.println("Error saving results.");
+                    }
                     break;
                 case "3":
-                    System.out.println("Exiting...");
+                    try {
+                        calc.restore();
+                        calc.showResults();
+                    } catch (IOException | ClassNotFoundException e) {
+                        System.out.println("Error restoring results.");
+                    }
                     break;
+                case "4":
+                    System.out.println("Exiting...");
+                    return;
                 default:
                     System.out.println("Invalid choice. Try again.");
             }
-        } while (!choice.equals("3"));
-    }
-
-    public static void main(String[] args) {
-        Main main = new Main();
-        main.menu(); // Викликаємо метод меню
+        }
     }
 }
