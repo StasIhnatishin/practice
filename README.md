@@ -60,5 +60,6 @@
 ![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/8example.jpg)
 ##  Приклад 2 Тестувння програми
 ![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/9example.jpg)
-
+##  Javadoc документація.
+![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/11example.png)
 
