@@ -60,6 +60,12 @@
 ![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/8example.jpg)
 ##  Приклад 2 Тестувння програми
 ![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/9example.jpg)
+##  Приклад 3 Перевантаження
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/12example.jpg)
+##  Приклад 4 Поліморфізм
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/13example.jpg)
+##  Приклад 5 Перевизначення
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/14example.jpg)
 ##  Javadoc документація.
 ![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/11example.jpg)
 
