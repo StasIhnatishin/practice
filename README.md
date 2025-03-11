@@ -194,3 +194,4 @@ public class ViewableResult implements Viewable {
 
 # 5 Завдання 
 ## [Calc.java](5-exercises/Calc.java) Клас для обчислень і логіки програми.
+## Application.java
