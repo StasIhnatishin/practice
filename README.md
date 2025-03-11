@@ -1,4 +1,4 @@
-# 1 Завдання
+![image](https://github.com/user-attachments/assets/a676811b-3409-4118-b92d-75069a90a259)# 1 Завдання
 ## 1 приклад
 
 ![\StasIhnatishin\practice\allPhoto\1example.png](1-exercies/allPhoto/1example.png)
@@ -232,3 +232,9 @@ public class Menu {
     }
 }
 ```
+##  Приклад 1 Робота програми
+![\StasIhnatishin\practice\allPhoto\1example.png](5-exercies/AllPhoto/3example.jpg)
+##  Приклад 2 Використання макрокоманд
+![\StasIhnatishin\practice\allPhoto\1example.png](5-exercies/AllPhoto/4example.jpg)
+##  Приклад 3 Тестування програми
+![\StasIhnatishin\practice\allPhoto\1example.png](5-exercies/AllPhoto/5example.jpg)
