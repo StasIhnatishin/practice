@@ -1,42 +1,31 @@
 import java.io.Serializable;
 
 /**
- * Клас для зберігання параметрів та результатів обчислень.
+ * Клас для зберігання параметрів і результатів обчислень у вигляді об'єкта.
  */
-public class Item2d implements Serializable {
-
-    private double x;
-    private double y;
-    private String functionType;
+class Item2d implements Serializable {
+    private int length;
+    private int width;
+    private int height;
+    private int perimeter;
+    private int area;
+    private int volume;
 
     private static final long serialVersionUID = 1L;
 
-    public Item2d() {
-        this.x = 0.0;
-        this.y = 0.0;
-        this.functionType = "sin";
+    public Item2d(int length, int width, int height, int perimeter, int area, int volume) {
+        this.length = length;
+        this.width = width;
+        this.height = height;
+        this.perimeter = perimeter;
+        this.area = area;
+        this.volume = volume;
     }
 
-    public Item2d(double x, double y, String functionType) {
-        this.x = x;
-        this.y = y;
-        this.functionType = functionType;
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public String getFunctionType() {
-        return functionType;
-    }
-
-    @Override
-    public String toString() {
-        return "x = " + x + ", y = " + y + ", Function = " + functionType;
-    }
+    public int getLength() { return length; }
+    public int getWidth() { return width; }
+    public int getHeight() { return height; }
+    public int getPerimeter() { return perimeter; }
+    public int getArea() { return area; }
+    public int getVolume() { return volume; }
 }
