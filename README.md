@@ -194,10 +194,10 @@ public class ViewableResult implements Viewable {
 
 # 5 Завдання 
 ##  Javadoc документація.
-![\StasIhnatishin\practice\allPhoto\1example.png](5-exercies/AllPhotos/1example.jpg)
+![\StasIhnatishin\practice\allPhoto\1example.png](5-exercises/AllPhotos/1example.jpg)
 ## [Calc.java](5-exercises/Calc.java) Клас для обчислень і логіки програми.
 ## Application.java Клас, що реалізує логіку роботи меню.
-![\StasIhnatishin\practice\allPhoto\1example.png](5-exercies/AllPhotos/2example.jpg)
+![\StasIhnatishin\practice\allPhoto\1example.png](5-exercises/AllPhotos/2example.jpg)
 ## Command.java Інтерфейс для команд, що можуть виконуватися в додатку.
 ```java
 public interface Command {
