@@ -52,7 +52,7 @@
 ## ViewableTable.java Клас, що представляє фабрику для створення об'єктів для відображення таблиці.
 ![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/4example.jpg)
 ## ViewTable.java Клас, що представляє фабрику для створення об'єктів для відображення таблиці. 
-![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/6example.jpg)
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/5example.jpg)
 ## MainTest.java клас містить тестові методи для перевірки основної функціональності програми, таких як додавання результатів і їх перегляд.
 ![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/10example.jpg)
 ##  Приклад 1 Робота програми
