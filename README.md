@@ -193,4 +193,4 @@ public class ViewableResult implements Viewable {
 ![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/11example.jpg)
 
 # 5 Завдання 
-## [Calc.java](5-exercies/Calc.java) Клас для обчислень і логіки програми.
+## [Calc.java](5-exercises/Calc.java) Клас для обчислень і логіки програми.
