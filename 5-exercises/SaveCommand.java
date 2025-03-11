@@ -1,5 +1,8 @@
 import java.io.IOException;
 
+/**
+ * Команда для збереження поточних кімнат у файл.
+ */
 public class SaveCommand implements Command {
     @Override
     public void execute() {

@@ -1,6 +1,9 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Клас для зберігання та виконання команд меню.
+ */
 public class Menu {
     private Map<String, Command> commands = new HashMap<>();
 

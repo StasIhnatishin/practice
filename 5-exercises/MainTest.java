@@ -4,6 +4,9 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Клас містить тестові методи для перевірки основної функціональності програми, таких як додавання результатів і їх перегляд.
+ */
 public class MainTest {
     private Calc calc;
 

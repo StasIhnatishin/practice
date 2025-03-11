@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * Головний клас додатка, що реалізує логіку роботи меню.
+ */
 public class Application {
     private static Application instance = new Application();
     private Menu menu = new Menu();

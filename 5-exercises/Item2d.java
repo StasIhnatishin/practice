@@ -1,5 +1,8 @@
 import java.io.Serializable;
 
+/**
+ * Клас для зберігання параметрів і результатів обчислень у вигляді об'єкта.
+ */
 public class Item2d implements Serializable {
     private int length;
     private int width;

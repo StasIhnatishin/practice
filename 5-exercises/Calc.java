@@ -1,6 +1,9 @@
 import java.io.*;
 import java.util.*;
 
+/**
+* Клас для обчислень і логіки програми.
+*/
 public class Calc {
     private static final String FNAME = "rooms.bin";
     private List<Item2d> results;

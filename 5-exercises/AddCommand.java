@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * Команда для додавання кімнати.
+ */
 public class AddCommand implements Command {
     @Override
     public void execute() {

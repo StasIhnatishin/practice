@@ -1,5 +1,8 @@
 import java.util.List;
 
+/**
+ * Команда для перегляду списку кімнат.
+ */
 public class ViewCommand implements Command {
     private ViewableTable view = new ViewTable();
     
