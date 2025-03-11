@@ -120,6 +120,8 @@ public class Item2d implements Serializable {
 ![\StasIhnatishin\practice\allPhoto\1example.png](2-exercies/allPhoto/6example.png)
 
 # 3 Завдання 
+##  Javadoc документація.
+![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/9example.png)
 ##  Calc.java Клас для обчислень і логіки програми
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/1example.png)
 ##   Item2d.java Клас для зберігання параметрів і результатів обчислень у вигляді об'єкта.
@@ -158,13 +160,13 @@ public class ViewableResult implements Viewable {
     }
 }
 ```
-##  Javadoc документація.
-![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/9example.png)
 ##  Приклад 1 Робота програми
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/10example.png)
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/11example.png)
 
 # 4 Завдання 
+##  Javadoc документація.
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/11example.jpg)
 ## Calc.java Клас для обчислень і логіки програми.
 ![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/1example.jpg)
 ## Item2d.java Клас для зберігання параметрів і результатів обчислень у вигляді об'єкта.
@@ -189,9 +191,44 @@ public class ViewableResult implements Viewable {
 ![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/13example.jpg)
 ##  Приклад 5 Перевизначення
 ![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/14example.jpg)
-##  Javadoc документація.
-![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/11example.jpg)
 
 # 5 Завдання 
+##  Javadoc документація.
+![\StasIhnatishin\practice\allPhoto\1example.png](5-exercies/AllPhoto/1example.png)
 ## [Calc.java](5-exercises/Calc.java) Клас для обчислень і логіки програми.
-## Application.java
+## Application.java Клас, що реалізує логіку роботи меню.
+![\StasIhnatishin\practice\allPhoto\1example.png](5-exercies/AllPhoto/2example.jpg)
+## Command.java Інтерфейс для команд, що можуть виконуватися в додатку.
+```java
+public interface Command {
+    void execute();
+}
+```
+## [Item2d.java](5-exercises/Item2d.java) Клас для зберігання параметрів і результатів обчислень у вигляді об'єкта
+## Main.java Головний клас для запуску програми.
+```java
+public class Main {
+    public static void main(String[] args) {
+        Application app = Application.getInstance();
+        app.run();
+    }
+}
+```
+## Menu.java Клас для зберігання та виконання команд меню.
+```java
+public class Menu {
+    private Map<String, Command> commands = new HashMap<>();
+
+    public void add(String key, Command command) {
+        commands.put(key, command);
+    }
+
+    public void execute(String key) {
+        if (commands.containsKey(key)) {
+            commands.get(key).execute();
+        } else {
+            System.out.println("Invalid command.");
+        }
+    }
+}
+```
