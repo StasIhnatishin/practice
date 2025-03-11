@@ -2,21 +2,121 @@
 ## 1 приклад
 
 ![\StasIhnatishin\practice\allPhoto\1example.png](1-exercies/allPhoto/1example.png)
-### запитує ім'я, а потім виводить результат
+### Програма запитує ім'я, а потім виводить результат
 ![\StasIhnatishin\practice\allPhoto\1example.png](1-exercies/allPhoto/image%20copy.png)
 ### результат
 # 2 Завдання
 ## 1 приклад (Розробити клас, що серіалізується, для зберігання параметрів і результатів обчислень)
-![\StasIhnatishin\practice\allPhoto\1example.png](2-exercies/allPhoto/1example.png)
-## 2 приклад (Клас для обчислення)
-![\StasIhnatishin\practice\allPhoto\1example.png](2-exercies/allPhoto/2example.png)
+```java
+public class Calc {
+    private static final String FNAME = "Item2d.bin";
+    private Item2d result;
+
+    public Calc() {
+        result = new Item2d();
+    }
+
+    public void setResult(Item2d result) {
+        this.result = result;
+    }
+
+    public Item2d getResult() {
+        return result;
+    }
+
+    private double calc(double x) {
+        return Math.sin(x * Math.PI / 180);
+    }
+
+    public double init(double x) {
+        result.setXY(x, calc(x));
+        return result.getY();
+    }
+
+    public void show() {
+        System.out.println(result);
+    }
+
+    public void save() throws IOException {
+        try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(FNAME))) {
+            os.writeObject(result);
+            os.flush();
+        }
+    }
+
+    public void restore() throws Exception {
+        try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(FNAME))) {
+            result = (Item2d) is.readObject();
+        }
+    }
+}
+```
+## 2 приклад (Клас для збереження вхідних даних та результатів обчислень.)
+```java
+public class Item2d implements Serializable {
+    private double x;
+
+    private double y;
+
+    private String functionType;
+
+
+    private static final long serialVersionUID = 1L;
+
+
+    public Item2d() {
+        this.x = 0.0;
+        this.y = 0.0;
+        this.functionType = "sin";
+    }
+
+
+    public Item2d(double x, double y, String functionType) {
+        this.x = x;
+        this.y = y;
+        this.functionType = functionType;
+    }
+
+
+    public double getX() {
+        return x;
+    }
+
+
+    public double getY() {
+        return y;
+    }
+
+
+    public String getFunctionType() {
+        return functionType;
+    }
+
+
+    public void setXY(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+
+    @Override
+    public String toString() {
+        return "x = " + x + ", y = " + y + ", Function = " + functionType;
+    }
+
+
+    public void setFunctionResult(double x, double y, String functionType) {
+        this.x = x;
+        this.y = y;
+        this.functionType = functionType;
+    }
+}
+```
 ## 3 приклад (Розробити клас для демонстрації в діалоговому режимі збереження та відновлення стану об'єкта)
 ![\StasIhnatishin\practice\allPhoto\1example.png](2-exercies/allPhoto/3example.png)
-## 4 приклад (Розробити клас для тестування коректності результатів обчислень та серіалізації/десеріалізації)
-![\StasIhnatishin\practice\allPhoto\1example.png](2-exercies/allPhoto/4example.png)
-## 5 приклад (Визначити периметр, площу та об'єм приміщення за заданими двійковими значеннями довжини, ширини та висоти)
+## 4 приклад (Визначити периметр, площу та об'єм приміщення за заданими двійковими значеннями довжини, ширини та висоти)
 ![\StasIhnatishin\practice\allPhoto\1example.png](2-exercies/allPhoto/5example.png)
-## 6 приклад (тестування)
+## 5 приклад (Тестування)
 ![\StasIhnatishin\practice\allPhoto\1example.png](2-exercies/allPhoto/6example.png)
 
 # 3 Завдання 
@@ -29,18 +129,41 @@
 ##   MainTest.java Клас для тестування основної функціональності програми. 
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/4example.png)
 ##   View.java Інтерфейс для класів, які відповідальні за відображення результатів. 
-![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/5example.png)
+```java
+public interface View {
+    void displayResult(Item2d result);
+}
+```
 ##  Viewable.java: Інтерфейс для фабрик, які створюють об'єкти для відображення результатів. 
-![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/6example.png)
+```java
+public interface Viewable {
+    View createView();
+}
+```
 ##  ViewResult.java Клас, який реалізує інтерфейс View і відповідає за текстове відображення результатів обчислень на екран.
-![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/7example.png)
+```java
+public class ViewResult implements View {
+    @Override
+    public void displayResult(Item2d result) {
+        System.out.println("Result: " + result);
+    }
+}
+```
 ##  ViewableResult.java Клас, що реалізує інтерфейс Viewable і створює об'єкти ViewResult.
-![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/8example.png)
+```java
+public class ViewableResult implements Viewable {
+    @Override
+    public View createView() {
+        return new ViewResult();
+    }
+}
+```
 ##  Javadoc документація.
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/9example.png)
 ##  Приклад 1 Робота програми
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/10example.png)
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/11example.png)
+
 # 4 Завдання 
 ## Calc.java Клас для обчислень і логіки програми.
 ![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/1example.jpg)
