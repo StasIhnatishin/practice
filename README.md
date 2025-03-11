@@ -43,22 +43,22 @@
 ![\StasIhnatishin\practice\allPhoto\1example.png](3-exercies/AllPhoto/11example.png)
 # 4 Завдання 
 ## Calc.java Клас для обчислень і логіки програми.
-![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/1example.png)
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/1example.jpg)
 ## Item2d.java Клас для зберігання параметрів і результатів обчислень у вигляді об'єкта.
-![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/2example.png)
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/2example.jpg)
 ## Main.java Основний клас програми, відповідає за взаємодію з користувачем.
-![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/3example.png)
-![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/4example.png)
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/3example.jpg)
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/4example.jpg)
 ## ViewableTable.java Клас, що представляє фабрику для створення об'єктів для відображення таблиці.
-![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/5example.png)
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/5example.jpg)
 ## ViewTable.java Клас, що представляє фабрику для створення об'єктів для відображення таблиці. 
-![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/6example.png)
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/6example.jpg)
 ## MainTest.java клас містить тестові методи для перевірки основної функціональності програми, таких як додавання результатів і їх перегляд.
-![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/10example.png)
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/10example.jpg)
 ##  Приклад 1 Робота програми
-![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/7example.png)
-![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/8example.png)
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/7example.jpg)
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/8example.jpg)
 ##  Приклад 2 Тестувння програми
-![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/9example.png)
+![\StasIhnatishin\practice\allPhoto\1example.png](4-exercies/AllPhoto/9example.jpg)
 
 
