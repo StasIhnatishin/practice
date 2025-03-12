@@ -240,3 +240,76 @@ public class Menu {
 ![\StasIhnatishin\practice\allPhoto\1example.png](5-exercises/AllPhotos/5example.jpg)
 
 # 6 Завдання 
+##  Javadoc документація.
+![\StasIhnatishin\practice\allPhoto\1example.png](6-exercises/AllPhotos/1example.jpg)
+## [Calc.java](6-exercises/Calc.java) Клас для обчислень і логіки програми. Реалізує багатопоточність
+```java
+public void computeStatistics() {
+    if (results.isEmpty()) {
+        System.out.println("No data available for statistics.");
+        return;
+    }
+
+    ExecutorService executor = Executors.newFixedThreadPool(3);
+    Future<Integer> minFuture = executor.submit(() -> {
+        System.out.println("Calculating minimum area... (Progress: 33%)");
+        int minArea = results.stream().mapToInt(Item2d::getArea).min().orElse(0);
+        System.out.println("Minimum area calculated.");
+        return minArea;
+    });
+
+    Future<Integer> maxFuture = executor.submit(() -> {
+        System.out.println("Calculating maximum area... (Progress: 66%)");
+        int maxArea = results.stream().mapToInt(Item2d::getArea).max().orElse(0);
+        System.out.println("Maximum area calculated.");
+        return maxArea;
+    });
+
+    Future<Double> avgFuture = executor.submit(() -> {
+        System.out.println("Calculating average area... (Progress: 99%)");
+        double avgArea = results.stream().mapToInt(Item2d::getArea).average().orElse(0.0);
+        System.out.println("Average area calculated.");
+        return avgArea;
+    });
+
+    try {
+        int minArea = minFuture.get();
+        int maxArea = maxFuture.get();
+        double avgArea = avgFuture.get();
+
+        System.out.println("All calculations completed. (Progress: 100%)");
+        System.out.println("Statistics:");
+        System.out.println("Min Area: " + minArea);
+        System.out.println("Max Area: " + maxArea);
+        System.out.println("Average Area: " + avgArea);
+    } catch (InterruptedException | ExecutionException e) {
+        e.printStackTrace();
+    } finally {
+        executor.shutdown();
+    }
+}
+```
+## [Application.java](6-exercises/Application.java) Клас, що реалізує логіку роботи меню.
+## Command.java Інтерфейс для команд, що можуть виконуватися в додатку.
+```java
+public interface Command {
+    void execute();
+}
+```
+## [Item2d.java](5-exercises/Item2d.java) Клас для зберігання параметрів і результатів обчислень у вигляді об'єкта
+## StatisticsCommand.java Команда для виведення статистики.
+```java
+/**
+ * Команда для виведення статистики.
+ */
+public class StatisticsCommand implements Command {
+    @Override
+    public void execute() {
+        Calc.getInstance().computeStatistics();
+    }
+}
+```
+##  Приклад 1 Робота програми
+![\StasIhnatishin\practice\allPhoto\1example.png](6-exercises/AllPhotos/2example.jpg)
+##  Приклад 2 Тестування програми
+![\StasIhnatishin\practice\allPhoto\1example.png](6-exercises/AllPhotos/3example.jpg)
