@@ -241,8 +241,9 @@ public class Menu {
 
 # 6 Завдання 
 ##  Javadoc документація.
-![\StasIhnatishin\practice\allPhoto\1example.png](6-exercises/AllPhotos/1example.jpg)
-## [Calc.java](6-exercises/Calc.java) Клас для обчислень і логіки програми. Реалізує багатопоточність
+![\StasIhnatishin\practice\allPhoto\1example.png](6-exercises/AllPhoto/1example.jpg)
+## [Calc.java](6-exercises/Calc.java) Клас для обчислень і логіки програми. 
+Метод що реалізує багатопоточність:
 ```java
 public void computeStatistics() {
     if (results.isEmpty()) {
@@ -310,6 +311,6 @@ public class StatisticsCommand implements Command {
 }
 ```
 ##  Приклад 1 Робота програми
-![\StasIhnatishin\practice\allPhoto\1example.png](6-exercises/AllPhotos/2example.jpg)
+![\StasIhnatishin\practice\allPhoto\1example.png](6-exercises/AllPhoto/2example.jpg)
 ##  Приклад 2 Тестування програми
-![\StasIhnatishin\practice\allPhoto\1example.png](6-exercises/AllPhotos/3example.jpg)
+![\StasIhnatishin\practice\allPhoto\1example.png](6-exercises/AllPhoto/3example.jpg)
