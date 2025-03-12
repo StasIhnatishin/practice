@@ -243,7 +243,7 @@ public class Menu {
 ##  Javadoc документація.
 ![\StasIhnatishin\practice\allPhoto\1example.png](6-exercises/AllPhoto/1example.jpg)
 ## [Calc.java](6-exercises/Calc.java) Клас для обчислень і логіки програми. 
-Метод що реалізує багатопоточність:
+Метод що реалізує паралельну обробку колекції:
 ```java
 public void computeStatistics() {
     if (results.isEmpty()) {
