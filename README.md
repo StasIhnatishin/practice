@@ -238,3 +238,5 @@ public class Menu {
 ![\StasIhnatishin\practice\allPhoto\1example.png](5-exercises/AllPhotos/4example.jpg)
 ##  Приклад 3 Тестування програми
 ![\StasIhnatishin\practice\allPhoto\1example.png](5-exercises/AllPhotos/5example.jpg)
+
+# 6 Завдання 
